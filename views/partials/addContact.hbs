@@ -1,0 +1,14 @@
+<div>
+    <form method="POST" action="/add">
+        <div class="Menu">
+            <input type="text" name="name" id="name" placeholder="Имя">
+            <input type="number" name="number" id="number" placeholder="Телефон">
+        </div>
+        <div class="Menu">
+            <button id="btAdd" type="submit" >Добавить</button>
+            <button type="btCancel" onclick="{{exit}}">Отмена</button>
+        </div>
+    </form>
+    <div id="errorDiv" style="color: red;"></div>
+</div>
+
