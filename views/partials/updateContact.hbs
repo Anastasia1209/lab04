@@ -3,8 +3,8 @@
 
         <div class="Menu">
             <input type="hidden" name="id" value="{{user.id}}">
-            <input id="inpName" value="{{user.name}}" name="name" type="name" onchange="BlockREmove()" onclick="BlockREmove()" placeholder="Имя" >
-            <input id ='inpName2' value="{{user.number}}" name="number" type="number" onchange="BlockREmove()" onclick="BlockREmove2()" placeholder="Номер" >
+            <input id="inpName" value="{{user.name}}" name="name" type="name" onchange="DeleteID()" onclick="DeleteID()" placeholder="Имя" >
+            <input id ='inpName2' value="{{user.number}}" name="number" type="number" onchange="DeleteID2()" onclick="DeleteID2()" placeholder="Номер" >
        </div>
 
         <div class="Menu">
@@ -33,7 +33,7 @@
             console.error('Error:', error);
         });
     }
-    function BlockREmove(){
+    function DeleteID(){
         if(name == null)
             name =  document.getElementById('inpName').value;
         if(document.getElementById('inpName').value != name)
@@ -41,7 +41,7 @@
         if(document.getElementById('inpName').value == name)
             document.getElementById('delBTN').disabled = false;
     }
-    function BlockREmove2(){
+    function DeleteID2(){
         if(number == null)
             number =  document.getElementById('inpName2').value;
         if(document.getElementById('inpName2').value != number)
