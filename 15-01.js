@@ -40,7 +40,7 @@ app.post('/add', async function(req, res) {
     req.on('end', () => {
         let name = qs.parse(data)['name'];
         let number = qs.parse(data)['number'];
-
+if (name && number){
         let newUser = { "id": -1, "name": `${name}`, "number": `${number}` };
 
         let DB;
@@ -61,7 +61,10 @@ app.post('/add', async function(req, res) {
                 console.log('Written successfully.');
             }
         });
+	} else {
+		console.log('No data provided.');
 
+	}
         res.writeHead(302, { 'Location': '/' });
         res.end();
     });
